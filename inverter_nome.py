@@ -10,3 +10,15 @@ inverter_nome()
 
 """Sem utilizar o [::-1]:"""
 
+def inverter_texto(texto):
+    string_invertida = ""
+    
+    for i in texto:
+        string_invertida = i + string_invertida
+    
+    return string_invertida
+
+texto = input("Digite uma string para inverter: ")
+
+print(f"String invertida: {inverter_texto(texto)}")
+
