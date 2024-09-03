@@ -1,8 +1,9 @@
 import json
+
 with open('faturamento.json', 'r') as file:
     data = json.load(file)
 
-faturamento = data['faturamento_diario']
+faturamento = [item['valor'] for item in data]
 
 faturamento_sem_zero = [valor for valor in faturamento if valor > 0]
 
